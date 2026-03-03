@@ -59,7 +59,7 @@ class chatbook:
             self.write_post()
         
         elif user_input == "4":
-            self.message_friend()
+            self.message_friend()x
         elif user_input == "5":
             self.exit()
         else:
