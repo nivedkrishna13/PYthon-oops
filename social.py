@@ -39,8 +39,12 @@ class chatbook:
             print("You must be logged in to message a friend.")
             self.menu()
     def exit(self):
-        print("Goodbye!")
-        self.loggedin = False
+        if self.loggedin:
+           print("Goodbye!")
+           self.loggedin = False
+
+        else:
+            print("login first to exit")
         exit()
 
 
@@ -52,11 +56,12 @@ class chatbook:
         elif user_input == "2":
             self.login()
         elif user_input == "3":
-            pass
+            self.write_post()
+        
         elif user_input == "4":
-            pass
+            self.message_friend()
         elif user_input == "5":
-            print("Goodbye!")
+            self.exit()
         else:
             print("Invalid input, please try again.")
             self.menu()
